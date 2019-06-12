@@ -8,7 +8,7 @@ RUN apk add --no-cache \
 
 RUN git clone https://github.com/aerospike/aerospike-client-c && \
     cd aerospike-client-c && \
-    git checkout tags/4.1.6 && \
+    git checkout tags/4.1.8 && \
     git submodule update --init && \
     make
 
@@ -17,4 +17,4 @@ ENV DOWNLOAD_C_CLIENT=0 \
     PREFIX=/aerospike-client-c/target/Linux-x86_64 \
     AEROSPIKE_LUA_PATH=/aerospike-client-c/modules/lua-core/src
 
-RUN pip install aerospike==2.1.1
+RUN pip install aerospike==2.2.3
